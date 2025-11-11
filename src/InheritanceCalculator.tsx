@@ -163,8 +163,8 @@ export const InheritanceCalculator: React.FC = () => {
   };
 
   return (
-    <div className="p-6 max-w-3xl mx-auto space-y-4">
-      <h1 className="text-2xl font-bold mb-4">🕌 Kalkulator Warisan Islam (Faraidh)</h1>
+    <div className="waris:p-6 waris:max-w-3xl waris:mx-auto waris:space-y-4">
+      <h1 className="waris:text-2xl waris:font-bold waris:mb-4">🕌 Kalkulator Warisan Islam (Faraidh)</h1>
 
       <AssetList assets={assets} setAssets={setAssets} />
 
@@ -190,7 +190,8 @@ export const InheritanceCalculator: React.FC = () => {
 
       <button
         onClick={() => setShowDiagram(!showDiagram)}
-        className="bg-purple-600 text-white px-4 py-2 rounded"
+        className="waris:bg-purple-600 waris:hover:bg-purple-500 waris:text-white waris:px-4 waris:py-2 waris:rounded
+        waris:transition-all waris:duration-200 waris:cursor-pointer"
       >
         {showDiagram ? "Sembunyikan Diagram" : "Tampilkan Diagram"}
       </button>
@@ -198,8 +199,7 @@ export const InheritanceCalculator: React.FC = () => {
       {showDiagram && (
         results.length > 0 && (
           <>
-            {console.log(results)}
-            <h3 className="font-semibold mt-4">Diagram Silsilah:</h3>
+            <h3 className="waris:font-semibold waris:mt-4">Diagram Silsilah:</h3>
             <InheritanceFlow total={totalAssets} results={results} />
           </>
         ))}

@@ -18,17 +18,18 @@ const WasiatUtangBiayaForm: React.FC<Props> = ({
     setBiaya,
 }) => {
     return (
-        <div className="bg-gray-50 p-4 rounded-md shadow-sm space-y-3">
-            <h2 className="font-semibold text-lg mb-2">💰 Pengurangan dari Harta Warisan</h2>
+        <div className="waris:bg-gray-50 waris:p-4 waris:rounded-md waris:shadow-sm waris:space-y-3">
+            <h2 className="waris:font-semibold waris:text-lg mb-2">💰 Pengurangan dari Harta Warisan</h2>
 
-            <div className="space-y-2">
-                <label className="block">
-                    <span className="text-gray-700 font-medium">Wasiat</span>
+            <div className="waris:space-y-2">
+                <label className="waris:block">
+                    <span className="waris:text-gray-700 waris:font-medium">Wasiat</span>
                     <input
                         type="number"
                         value={wasiat}
                         onChange={(e) => setWasiat(Number(e.target.value))}
-                        className="mt-1 block w-full rounded border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2"
+                        className="waris:mt-1 waris:block waris:w-full waris:rounded waris:border-gray-300 waris:shadow-sm 
+                        waris:focus:ring-blue-500 waris:focus:border-blue-500 waris:p-2"
                         placeholder="Masukkan jumlah wasiat"
                         onFocus={e => e.target.value === "0" && (e.target.value = "")}
                         onBlur={e => e.target.value === "" && (e.target.value = "0")}
@@ -36,12 +37,13 @@ const WasiatUtangBiayaForm: React.FC<Props> = ({
                 </label>
 
                 <label className="block">
-                    <span className="text-gray-700 font-medium">Utang</span>
+                    <span className="waris:text-gray-700 waris:font-medium">Utang</span>
                     <input
                         type="number"
                         value={utang}
                         onChange={(e) => setUtang(Number(e.target.value))}
-                        className="mt-1 block w-full rounded border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2"
+                        className="waris:mt-1 waris:block waris:w-full waris:rounded waris:border-gray-300 waris:shadow-sm 
+                        waris:focus:ring-blue-500 waris:focus:border-blue-500 waris:p-2"
                         placeholder="Masukkan jumlah utang"
                         onFocus={e => e.target.value === "0" && (e.target.value = "")}
                         onBlur={e => e.target.value === "" && (e.target.value = "0")}
@@ -49,12 +51,13 @@ const WasiatUtangBiayaForm: React.FC<Props> = ({
                 </label>
 
                 <label className="block">
-                    <span className="text-gray-700 font-medium">Biaya Pemakaman</span>
+                    <span className="waris:text-gray-700 waris:font-medium">Biaya Pemakaman</span>
                     <input
                         type="number"
                         value={biaya}
                         onChange={(e) => setBiaya(Number(e.target.value))}
-                        className="mt-1 block w-full rounded border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2"
+                        className="waris:mt-1 waris:block waris:w-full waris:rounded waris:border-gray-300 waris:shadow-sm 
+                        waris:focus:ring-blue-500 waris:focus:border-blue-500 waris:p-2"
                         placeholder="Masukkan biaya pemakaman"
                         onFocus={e => e.target.value === "0" && (e.target.value = "")}
                         onBlur={e => e.target.value === "" && (e.target.value = "0")}

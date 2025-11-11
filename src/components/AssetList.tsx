@@ -16,14 +16,14 @@ export default function AssetList({ assets, setAssets }: Props) {
     };
 
     return (
-        <div className="border p-3 rounded-md">
-            <h2 className="font-semibold mb-2">🏠 Aset</h2>
+        <div className="waris:border waris:p-3 waris:rounded-md">
+            <h2 className="waris:font-semibold waris:mb-2">🏠 Aset</h2>
             {assets.map((a) => (
-                <div key={a.id} className="flex flex-col sm:flex-row gap-2 mb-3">
-                    <div className="flex flex-col sm:flex-row flex-1 gap-2">
+                <div key={a.id} className="waris:flex waris:flex-col waris:sm:flex-row waris:gap-2 waris:mb-3">
+                    <div className="waris:flex waris:flex-col waris:sm:flex-row waris:flex-1 waris:gap-2">
                         <input
                             type="text"
-                            className="border rounded px-2 py-1 w-full"
+                            className="waris:border waris:rounded waris:px-2 waris:py-1 waris:w-full"
                             placeholder="Nama aset (misal: Rumah)"
                             value={a.name}
                             onChange={(e) =>
@@ -36,7 +36,7 @@ export default function AssetList({ assets, setAssets }: Props) {
                         />
                         <input
                             type="number"
-                            className="border rounded px-2 py-1 w-full sm:w-auto"
+                            className="waris:border waris:rounded waris:px-2 waris:py-1 waris:w-full waris:sm:w-auto"
                             placeholder="Nilai"
                             value={a.value}
                             onChange={(e) =>
@@ -54,11 +54,11 @@ export default function AssetList({ assets, setAssets }: Props) {
                     </div>
                     <button
                         onClick={() => deleteAsset(a.id)}
-                        className="bg-red-600 hover:bg-red-500 rounded px-3 py-1 self-end sm:self-auto transition-all duration-200 cursor-pointer"
+                        className="waris:bg-red-600 waris:hover:bg-red-500 waris:rounded waris:px-3 waris:py-1 waris:self-end waris:sm:self-auto waris:transition-all waris:duration-200 waris:cursor-pointer"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5 text-white"
+                            className="waris:h-5 waris:w-5 waris:text-white"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -75,7 +75,7 @@ export default function AssetList({ assets, setAssets }: Props) {
             ))}
             <button
                 onClick={addAsset}
-                className="bg-blue-500 text-white rounded px-3 py-1 mt-2"
+                className="waris:bg-blue-500 waris:text-white waris:rounded waris:px-3 waris:py-1 waris:mt-2 waris:transition-all waris:duration-200 waris:hover:bg-blue-400 waris:cursor-pointer"
             >
                 + Tambah Aset
             </button>

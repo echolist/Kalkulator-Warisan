@@ -16,7 +16,7 @@ export default function InheritanceFlow({ total, results }: Props) {
                 id: "root",
                 data: {
                     label: (
-                        <div className="text-center">
+                        <div className="waris:text-center">
                             💰 <b>Total Harta</b>
                             <div>Rp {total.toLocaleString("id-ID")}</div>
                         </div>
@@ -52,7 +52,7 @@ export default function InheritanceFlow({ total, results }: Props) {
                 id: p.id.toString(),
                 data: {
                     label: (
-                        <div className="text-center">
+                        <div className="waris:text-center">
                             👨‍👩‍👧‍👦 {p.name} <br />
                             <small>{p.relation}</small>
                             <div>Rp {Math.round(p.share).toLocaleString("id-ID")}</div>
@@ -76,7 +76,7 @@ export default function InheritanceFlow({ total, results }: Props) {
                 id: s.id.toString(),
                 data: {
                     label: (
-                        <div className="text-center">
+                        <div className="waris:text-center">
                             ❤️ {s.name} <br />
                             <small>{s.relation}</small>
                             <div>Rp {Math.round(s.share).toLocaleString("id-ID")}</div>
@@ -100,7 +100,7 @@ export default function InheritanceFlow({ total, results }: Props) {
                 id: c.id.toString(),
                 data: {
                     label: (
-                        <div className="text-center">
+                        <div className="waris:text-center">
                             👶 {c.name} <br />
                             <small>{c.relation}</small>
                             <div>Rp {Math.round(c.share).toLocaleString("id-ID")}</div>

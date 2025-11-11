@@ -49,24 +49,24 @@ export default function AssetSuggestion({ assets, results }: Props) {
     const adjustment = totalShare - totalValue;
 
     return (
-        <div className="border p-3 rounded-md mt-6">
-            <h3 className="font-semibold mb-2">🏠 Saran Pembagian Aset Fisik</h3>
+        <div className="waris:border waris:p-3 waris:rounded-md waris:mt-6">
+            <h3 className="waris:font-semibold waris:mb-2">🏠 Saran Pembagian Aset Fisik</h3>
 
-            <table className="w-full border text-sm">
+            <table className="waris:w-full border waris:text-sm">
                 <thead>
-                    <tr className="bg-gray-100">
-                        <th className="border px-2 py-1">Aset</th>
-                        <th className="border px-2 py-1">Diusulkan Untuk</th>
-                        <th className="border px-2 py-1 text-right">Selisih (Rp)</th>
+                    <tr className="waris:bg-gray-100">
+                        <th className="waris:border waris:px-2 waris:py-1">Aset</th>
+                        <th className="waris:border waris:px-2 waris:py-1">Diusulkan Untuk</th>
+                        <th className="waris:border waris:px-2 waris:py-1 waris:text-right">Selisih (Rp)</th>
                     </tr>
                 </thead>
                 <tbody>
                     {suggestions.map((s, i) => (
                         <tr key={i}>
-                            <td className="border px-2 py-1">{s.assetName}</td>
-                            <td className="border px-2 py-1">{s.assignedTo}</td>
+                            <td className="waris:border waris:px-2 waris:py-1">{s.assetName}</td>
+                            <td className="waris:border waris:px-2 waris:py-1">{s.assignedTo}</td>
                             <td
-                                className={`border px-2 py-1 text-right ${s.difference > 0 ? "text-green-600" : "text-red-600"
+                                className={`waris:border waris:px-2 waris:py-1 waris:text-right ${s.difference > 0 ? "waris:text-green-600" : "waris:text-red-600"
                                     }`}
                             >
                                 {s.difference > 0 ? "+" : ""}
@@ -77,13 +77,13 @@ export default function AssetSuggestion({ assets, results }: Props) {
                 </tbody>
             </table>
 
-            <p className="text-xs mt-2 text-gray-500">
+            <p className="waris:text-xs mt-2 waris:text-gray-500">
                 🔹 Total aset fisik yang disarankan dibagi:{" "}
                 <strong>{totalPhysical.toLocaleString("id-ID")}</strong> rupiah.
             </p>
 
             {Math.abs(adjustment) > 1 && (
-                <p className="text-xs text-gray-500">
+                <p className="waris:text-xs waris:text-gray-500">
                     ⚖️ Total perlu penyesuaian sekitar{" "}
                     <strong>{Math.round(adjustment).toLocaleString("id-ID")} rupiah</strong>{" "}
                     agar nilai aset dan warisan seimbang.
